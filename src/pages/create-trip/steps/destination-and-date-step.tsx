@@ -10,7 +10,6 @@ interface DestinationAndDateStepProps {
   eventStartAndEndDates: DateRange | undefined
   closeGuestsInput: () => void;
   openGuestsInput: () => void;
-  setDestination: (destination: string) => void
   setEventStartAndEndDates: (dates: DateRange | undefined) => void
 }
 
@@ -18,7 +17,6 @@ function DestinationAndDateStep({
   closeGuestsInput,
   isGuestsInputOpen,
   openGuestsInput,
-  setDestination,
   eventStartAndEndDates,
   setEventStartAndEndDates
 }: DestinationAndDateStepProps) {
@@ -49,7 +47,6 @@ function DestinationAndDateStep({
           type="text"
           placeholder="Para onde você vai?"
           className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"
-          onChange={event => setDestination(event.target.value)}
         />
       </div>
 
